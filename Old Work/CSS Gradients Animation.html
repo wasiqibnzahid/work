@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      align-self: a;
+      background-image: linear-gradient(
+        45deg,
+        rgb(25, 206, 182),
+        rgb(175, 21, 247),
+        rgb(223, 24, 41)
+      );
+      background-size: 200%;
+      animation: bg-animation 20s infinite alternate;
+    }
+    .box {
+      position: absolute;
+      top: 30%;
+      left: 35%;
+      width: 300px;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 6px 7px 10px;
+      background-color: white;
+    }
+
+    h2 {
+      background-image: linear-gradient(-90deg, red, blue);
+      font-size: 2em;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      background-size: 200%;
+      animation: bg-animation 5s infinite alternate;
+    }
+    @keyframes bg-animation {
+      0% {
+        background-position: left;
+      }
+      100% {
+        background-position: right;
+      }
+    }
+  </style>
+  <body>
+    <div class="box">
+      <h2>Hello How are you?</h2>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/Login-style.css">
+    <link rel="stylesheet" href="css/payment.css">
+
+
+    <title>Pay Now | Frigg Kantine
+    </title>
+    <style>
+        body {
+            background-color: var(--color-bg);
+        }
+    </style>
+</head>
+
+<body>
+    <a class="btn-back" href="home.html"><img src="img/Icon ionic-ios-arrow-back-white.svg" alt=""></a>
+
+
+    <section class="login payment">
+        <div class="col col-1">
+            <h3 class="page-heading">Payment Method</h3>
+            <img src="img/Path 64.svg" alt="" class="side-img side-img-1">
+            <img src="img/Group 106.svg" alt="" class="side-img side-img-2">
+            <img src="img/Group 104.svg" alt="" class="side-img side-img-3">
+            <img src="img/Group 105.svg" alt="" class="side-img side-img-4">
+        </div>
+        <div class="col col-2">
+            <div class="mini-container">
+                <div class="payment-methods flex">
+                    <div class="payment-logo"><img src="img/visa.png" alt=""></div>
+                    <div class="payment-logo"><img src="img/Vipps.png" alt=""></div>
+                </div>
+                <h2>Add your card details</h2>
+                <form>
+                    <div class="input-box">
+                        <label for="#pay-username">Username</label>
+                        <input required id="pay-username" type="text" placeholder="Username">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="#pay-card">Card Number</label>
+                        <input required id="pay-card" type="text" placeholder="4444 4444 1111">
+                    </div>
+                    <div class="flex input-box">
+                        <input required type="date" placeholder="Add Expiry" class="input-small">
+                        <input required type="text" placeholder="Add CVV" class="input-small">
+                    </div>
+                    <input type="submit" onclick="location.href='/payment-success.html'" class="btn"
+                        value="Done"></input>
+                </form>
+
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

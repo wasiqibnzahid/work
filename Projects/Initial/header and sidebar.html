@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Red+Hat+Mono:wght@300&family=Roboto+Condensed:wght@300&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/header-sidebar.css" />
+  </head>
+  <body>
+    <div class="header-div">
+      <img
+        id="logo-horizontal"
+        src="img/Frigg-logo-horizontal.png"
+        alt="Logo"
+      />
+    </div>
+    <div class="sidebar">
+      <div class="user-details">
+        <img src="img/user-pfp.png" alt="Profile Picture" id="pfp" />
+        <p class="user-name">Alexander Anders</p>
+        <p class="user-auth">Super Admin</p>
+
+        <div class="dropdown-div">
+          <img src="img/dropdown.png" alt="Dropdown" id="dropdown-icon" />
+        </div>
+        <div class="hidden">
+          <a href="Login Page.html" id="link-1">Log Out</a>
+          <hr />
+          <a href="#" id="link-2">Account Settings</a>
+        </div>
+      </div>
+      <hr />
+      <div class="side-list">
+        <div class="side-list-item item-1">
+          <img src="img/sidebar-img.png" alt="image" class="sidebar-img" />
+          <p class="list-text">Dashboard</p>
+        </div>
+        <div class="side-list-item item-2">
+          <img
+            src="img/sidebar-img.png"
+            alt="image"
+            class="sidebar-img sidebar-img-clicked"
+          />
+          <div class="text-user">
+            <p class="list-text dropdown-item-user" id="user-man-text">
+              User Management
+            </p>
+            <hr class="menu-line" />
+            <p class="list-text dropdown-item-user hidden-item-user">
+              White List Users
+            </p>
+            <hr class="menu-line" />
+            <p class="list-text dropdown-item-user hidden-item-user">
+              Roles List
+            </p>
+            <hr class="menu-line" />
+            <p
+              class="list-text dropdown-item-user hidden-item-user"
+              style="font-size: 11px"
+            >
+              User Roles and Permissions
+            </p>
+          </div>
+          <img
+            src="img/dropdown-orange.png"
+            alt=""
+            class="dropdown-side dropdown-side-clicked"
+          />
+        </div>
+        <div class="side-list-item item-3">
+          <img src="img/sidebar-img.png" alt="image" class="sidebar-img" />
+          <p class="list-text">Category</p>
+        </div>
+        <div class="side-list-item item-4">
+          <img src="img/sidebar-img.png" alt="image" class="sidebar-img" />
+          <p class="list-text" style="font-size: 11px">Product Management</p>
+          <img src="img/dropdown-orange.png" alt="" class="dropdown-side" />
+        </div>
+        <div class="side-list-item item-5">
+          <img src="img/sidebar-img.png" alt="image" class="sidebar-img" />
+          <p class="list-text">Order Management</p>
+        </div>
+        <div class="side-list-item item-6">
+          <img src="img/sidebar-img.png" alt="image" class="sidebar-img" />
+          <p class="list-text">Page Builder</p>
+          <img src="img/dropdown-orange.png" alt="" class="dropdown-side" />
+        </div>
+        <div class="side-list-item item-7">
+          <img src="img/sidebar-img.png" alt="image" class="sidebar-img" />
+          <p class="list-text">Banner</p>
+          <img src="img/dropdown-orange.png" alt="" class="dropdown-side" />
+        </div>
+        <div class="side-list-item item-8">
+          <img src="img/sidebar-img.png" alt="image" class="sidebar-img" />
+          <p class="list-text">Other</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

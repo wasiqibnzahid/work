@@ -1,0 +1,177 @@
+@font-face {
+  font-family: "Bebas Neue Pro Regular";
+  src: url("bebas_neue_pro_regular-webfont.woff2") format("woff2"),
+    url("bebas_neue_pro_regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url("http://fonts.cdnfonts.com/css/verdana");
+
+html {
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
+
+input[type="submit"] {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+* {
+  font-family: "Bebas Neue Pro Regular";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-bg: #f19b28;
+  --color-float: #dc5f26;
+  --color-grey-text: #403737;
+  --bg-payment: #ecf5f76b;
+}
+
+.main-heading {
+  font-size: 45px;
+  color: #f19b28;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn {
+  text-align: center;
+  background-color: var(--color-bg);
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 20px;
+  display: block;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Header */
+
+.cart-header {
+  text-align: center;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-bg);
+}
+
+.cart-header a {
+  margin-left: 30px;
+  position: absolute;
+  margin-top: 10px;
+  left: 0;
+}
+
+.cart-header a img {
+  max-width: 10px;
+}
+
+.cart-header h2 {
+  text-align: center;
+  justify-self: center;
+  width: 100%;
+  letter-spacing: 2px;
+  font-size: 30px;
+  font-weight: normal;
+}
+
+/* Footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.footer svg {
+  stroke: #5a5a5a;
+  fill: #fff;
+  width: 35px;
+  height: 35px;
+  margin: 4px 30px;
+  fill: none;
+  position: relative;
+}
+
+.footer a:hover svg {
+  fill: #f8932d;
+  stroke: #f8932d !important;
+}
+
+.footer a:nth-of-type(1) svg {
+  stroke: black;
+}
+
+.orange {
+  color: var(--color-bg);
+}
+
+.grey {
+  color: var(--color-grey-text);
+}
+
+.container {
+  width: 80%;
+  max-width: 450px;
+  margin: auto;
+}
+
+/* Media Queries */
+@media (min-width: 890px) {
+  .footer {
+    width: 100px;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-right: 1px solid #ecf5f7;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  section {
+    margin-left: 100px;
+  }
+
+  .cart-header a > img {
+    margin-left: 100px;
+  }
+}
+
+@media (max-width: 355px) {
+  .footer svg {
+    width: 25px;
+  }
+}

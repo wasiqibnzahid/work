@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        display: grid;
+        grid-template:
+          "header header header header header" 3em
+          "hero hero hero hero hero" 50vh
+          ". cards . sidebar ." auto
+          "footer footer footer footer footer" 3em / 1fr 3fr 2fr 1fr 1fr;
+      }
+
+      header {
+        grid-area: header;
+      }
+
+      header,
+      footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        color: yellow;
+      }
+
+      .hero {
+        grid-area: hero;
+        background-color: yellow;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .hero > h2 {
+        font-size: 100px;
+      }
+      .hero > p {
+        font-size: 50px;
+      }
+      .card-box {
+        grid-area: cards;
+      }
+      .card {
+        display: grid;
+        grid-template:
+          "img heading1" auto
+          "img content" 5em / 0.17fr 1fr;
+        margin-top: 10px;
+      }
+      .img {
+        grid-area: img;
+      }
+      .heading {
+        grid-area: heading1;
+      }
+      .content {
+        grid-area: content;
+      }
+
+      .sidebar {
+        grid-area: sidebar;
+        background-color: gray;
+        padding: 10px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      footer {
+        grid-area: footer;
+        bottom: 0;
+        height: 3em;
+      }
+      .img {
+        background: red;
+        height: 50px;
+        width: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <header><h1>Hello</h1></header>
+    <div class="hero">
+      <h2>How are you?</h2>
+      <br />
+      <p>Hope you're doing great</p>
+    </div>
+    <div class="card-box">
+      <div class="card">
+        <div class="img"></div>
+        <h2 class="heading">ZoZoZO</h2>
+        <div class="content">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, et
+          provident. Animi esse perspiciatis velit. Aut rerum ex placeat
+          maiores.
+        </div>
+      </div>
+      <div class="card">
+        <div class="img"></div>
+        <h2 class="heading">ZoZoZO</h2>
+        <div class="content">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, et
+          provident. Animi esse perspiciatis velit. Aut rerum ex placeat
+          maiores.
+        </div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <h2>Sidebar</h2>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque
+        obcaecati alias maxime quam inventore? Illo excepturi sit sed ex
+        consequuntur eligendi fuga. Repellat laborum recusandae eos ab officia,
+        quia harum iusto eius eum quidem. Veritatis nemo natus dolor! Deleniti
+        maxime, eveniet commodi quas tempore amet nemo sapiente odio in enim.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae libero
+        nesciunt iste! Recusandae cum voluptas iure, quibusdam natus, quidem,
+        laborum nobis perspiciatis vitae sint quis. Quod debitis nesciunt aut
+        labore corporis voluptas quis eligendi facere error. Non pariatur
+        corporis quas iure aut aperiam iste quod, ratione quisquam perspiciatis,
+        maxime a!
+      </p>
+    </div>
+    <footer><h1>The End</h1></footer>
+  </body>
+</html>

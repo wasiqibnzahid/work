@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      border: 2px black solid;
+      width: 15vw;
+      height: 15vh;
+      position: absolute;
+      top: 15vh;
+      left: 15vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+      background-color: aqua;
+      padding: 15px 20px;
+      outline: solid red 1px;
+      transition: ease-in-out 500ms;
+    }
+    a:hover {
+      outline-offset: 4px;
+      outline: solid red 1px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <a href="#">Hover</a>
+    </div>
+  </body>
+</html>

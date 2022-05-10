@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <style>
+    * {
+  padding: 0;
+  font-family: "Noto Sans", sans-serif;
+}
+
+body {
+  background-color: rgb(69, 25, 110);
+}
+#welcomearea {
+  background-color: white;
+  box-shadow: 5px 5px 10px;
+  margin-top: 140px;
+  height: 650px;
+  width: 400px;
+
+  flex-direction: column;
+  border: solid #520a52 5px;
+  border-radius: 5px;
+  margin-left: 400px;
+}
+
+#GameArea {
+  background-color: white;
+  box-shadow: 5px 5px 10px;
+  margin-top: 140px;
+  height: fit-content;
+  width: 400px;
+  flex-direction: column;
+  border: solid #520a52 5px;
+  border-radius: 5px;
+  margin-left: 400px;
+}
+
+#Output {
+  text-align: center;
+}
+p {
+  font-size: 18px;
+  text-align: center;
+  position: relative;
+  margin: 25px 0px;
+}
+
+#Previous,
+#GuessNumber,
+.correctNumber {
+  color: #e21d1d;
+}
+img {
+  height: 220px;
+  width: 390px;
+}
+
+button {
+  text-decoration: none;
+  color: white;
+  margin: 20px;
+  padding: 30px;
+  width: 215px;
+  border-radius: 8px;
+  align-self: center;
+  text-align: center;
+  font-size: 18px;
+  border: none;
+}
+
+#easy {
+  background-image: linear-gradient(rgb(86, 71, 151), rgb(99, 17, 194));
+}
+#hard {
+  background-image: linear-gradient(rgb(99, 17, 194), rgb(136, 68, 199));
+}
+
+#NewGame {
+  background-image: linear-gradient(rgb(86, 71, 151), rgb(99, 17, 194));
+}
+
+input {
+  width: 139px;
+  height: 47px;
+  margin-left: 130px;
+  font-size: 15px;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+}
+
+  </style>
+  </head>
+  <body onload="init()">
+    <!-- Welcome Screen -->
+    <div id="welcomearea">
+        <div class="items">
+      <p>Guess the Random Number</p>
+      <img src="GuessImage.svg" alt="Picture" />
+      <p>Select The Difficulty</p>
+      <button id="easy" onclick="easyMode()">Easy: 10 attempts</button>
+      <button id="hard" onclick="hardMode()">Hard: 5 attempts</button>
+    </div>
+    </div>
+
+    <!-- Game Area -->
+    <div id="GameArea">
+        <div class="items">
+      <button href="#" id="NewGame" onclick="reloadPage()">New Game</button>
+      <h3 id="Output">Guess The Number</h3>
+      <input
+        type="number"
+        id="inputBox"
+        placeholder="Enter Your Guess"
+        min="1"
+        max="100"
+        onchange="compareGuess()"
+      />
+      <div class="stats">
+        <p>Number of Previous Guesses: <p id="GuessNumber">0</p></p>
+        <br>
+        <p>Previous Guesses <p id="Previous">-</p></p>
+      </div>
+    </div>
+</div>
+    <script>
+      let ComputerGuess;
+let UserGuess = [];
+let audio = new Audio("./Click Sound.wav");
+
+const reloadPage = () => {
+  window.location.reload();
+};
+
+const init = () => {
+  ComputerGuess = Math.floor(Math.random() * 100);
+  document.getElementById("GameArea").style.display = "none";
+  document.getElementById("NewGame").style.display = "none";
+  document.getElementById("welcomearea").style.display = "block";
+};
+
+const startGame = () => {
+  document.getElementById("welcomearea").style.display = "none";
+  document.getElementById("GameArea").style.display = "block";
+  audio.play();
+};
+
+function easyMode() {
+  startGame();
+  maxGuess = 10;
+}
+function hardMode() {
+  startGame();
+  maxGuess = 5;
+}
+
+const compareGuess = () => {
+  const UserNumber = Number(document.getElementById("inputBox").value);
+  UserGuess = [...UserGuess, UserNumber];
+  document.getElementById("Previous").innerHTML = UserGuess;
+  document.getElementById("GuessNumber").innerHTML = UserGuess.length;
+  audio.play();
+
+  if (UserGuess.length < maxGuess) {
+    if (UserNumber > ComputerGuess) {
+      document.getElementById("Output").innerHTML = "Your Number is too High";
+      document.getElementById("inputBox").value = "";
+    } else if (UserNumber < ComputerGuess) {
+      document.getElementById("Output").innerHTML = "Your Number is too Low";
+      document.getElementById("inputBox").value = "";
+    } else {
+      document.getElementById(
+        "Output"
+      ).innerHTML = `Congratulations! You are Correct. The Number is ${ComputerGuess}`;
+      document.getElementById("NewGame").style.display = "block";
+      document.getElementById("inputBox").value = "";
+    }
+  } else if ((UserGuess.length = maxGuess)) {
+    if (UserNumber === ComputerGuess) {
+      document.getElementById(
+        "Output"
+      ).innerHTML = `Congratulations! You are Correct. The Number is ${ComputerGuess}.`;
+      document.getElementById("NewGame").style.display = "block";
+      document.getElementById("inputBox").setAttribute("disabled", true);
+    } else {
+      document.getElementById(
+        "Output"
+      ).innerHTML = `You Lose! Correct Number was: <p class="correctNumber"> ${ComputerGuess} </p>`;
+      document.getElementById("NewGame").style.display = "block";
+      document.getElementById("inputBox").setAttribute("disabled", true);
+    }
+  }
+};
+
+    </script>
+  </body>
+</html>

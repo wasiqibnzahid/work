@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/Login-style.css">
+
+
+    <title>Log In | Frigg Kantine
+    </title>
+    <style>
+        body {
+            background-color: var(--color-bg);
+        }
+    </style>
+</head>
+
+<body>
+    <section class="login">
+        <div class="col col-1"><img src="img/Frigg_Logo_F_Tekst_Vertikal_hvit.png" alt="" class="logo">
+            <img src="img/Path 64.svg" alt="" class="side-img side-img-1">
+            <img src="img/Group 106.svg" alt="" class="side-img side-img-2">
+            <img src="img/Group 104.svg" alt="" class="side-img side-img-3">
+            <img src="img/Group 105.svg" alt="" class="side-img side-img-4">
+        </div>
+        <div class="col col-2">
+            <h2 class="main-heading">Welcome</h2>
+            <h4>Login to your Account</h4>
+            <form class="login-input">
+                <label for="#user-email">Email Address</label>
+                <input required id="user-email" type="email" placeholder="Enter Your Email Address" class="email-input">
+                <label for="#user-pass">Password</label>
+                <input required type="password" id="user-pass" placeholder="Enter Your Password" class="password-input">
+                <input class="login-submit btn" type="submit" onclick="location.href='/home.html'"
+                    value="Login"></input>
+
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>

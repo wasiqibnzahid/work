@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="135" height="144.5" viewBox="0 0 135 144.5">
+  <defs>
+    <filter id="Ellipse_3" x="0" y="11.5" width="135" height="133" filterUnits="userSpaceOnUse">
+      <feOffset dx="-8" dy="14" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="7.5" result="blur"/>
+      <feFlood flood-color="#539f2a" flood-opacity="0.455"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_234" data-name="Group 234" transform="translate(-856.5 -145.5)">
+    <g id="Group_233" data-name="Group 233">
+      <g id="Group_232" data-name="Group 232" transform="translate(-195 -1446.5)">
+        <g transform="matrix(1, 0, 0, 1, 1051.5, 1592)" filter="url(#Ellipse_3)">
+          <ellipse id="Ellipse_3-2" data-name="Ellipse 3" cx="45" cy="44" rx="45" ry="44" transform="translate(30.5 20)" fill="#559d2e"/>
+        </g>
+      </g>
+      <text id="_" data-name="+" transform="translate(907 245.5)" fill="#fff" font-size="123" font-family="BebasNeuePro-Regular, Bebas Neue Pro" letter-spacing="0.04em"><tspan x="0" y="0">+</tspan></text>
+    </g>
+  </g>
+</svg>

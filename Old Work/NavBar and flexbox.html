@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <title>Nav</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto", sans-serif;
+      }
+      h3 {
+        margin: 10px;
+      }
+      body {
+        background-color: grey;
+      }
+      img {
+        width: 100px;
+        float: left;
+      }
+      .container {
+        background-color: slateblue;
+      }
+      .container::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      ul {
+        float: right;
+        list-style: none;
+      }
+      li {
+        display: inline-block;
+        margin-left: 14vw;
+        padding-top: 13px;
+        margin-right: 15px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+      }
+      a:hover {
+        color: black;
+      }
+      a::before {
+        content: "";
+        background-color: black;
+        width: 0%;
+        height: 5px;
+        position: absolute;
+        top: 0;
+        transition: ease-in-out 250ms;
+        border-radius: 10px;
+      }
+      a:hover::before {
+        content: "";
+        background-color: black;
+        width: 100%;
+        height: 5px;
+        position: absolute;
+        top: 0;
+      }
+
+      .box {
+        width: 50vw;
+        height: 50vh;
+        padding: 0.5em;
+        display: flex;
+        background: pink;
+        margin: 100px;
+      }
+      .item {
+        background-color: aqua;
+        margin: 10px;
+        text-align: center;
+        height: 10vh;
+      }
+
+      #box1 {
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+
+      #box2 {
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      #box2 > .item {
+        height: auto;
+      }
+      #box3 {
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+      #box3 > .item {
+        padding: 10px;
+      }
+      #box4 {
+        justify-content: center;
+        align-items: center;
+      }
+      #box5 {
+        justify-content: baseline;
+        align-items: center;
+
+        flex-direction: row;
+      }
+      .big {
+        font-size: 2em;
+      }
+      .line {
+        width: 25px;
+        height: 4px;
+        margin: 2px;
+        background-color: white;
+        border-radius: 10px;
+      }
+      .burger {
+        position: absolute;
+        right: 1%;
+        top: 11px;
+        display: none;
+        cursor: pointer;
+      }
+
+      .btno {
+        width: 30px;
+        height: 30px;
+        background-color: red;
+        position: absolute;
+      }
+      @media screen and (max-width: 955px) {
+        body {
+          top: 40px;
+        }
+        .container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          height: 40px;
+          transition: 500ms ease-in-out;
+          overflow: hidden;
+          position: sticky;
+          top: 0;
+          width: 100vw;
+          z-index: 1;
+        }
+        img {
+          margin: 0px 15px 0px 0px;
+        }
+        ul {
+          visibility: visible;
+        }
+        li {
+          display: list-item;
+          margin: 0;
+
+          transition: 500ms ease-in;
+        }
+        .li-resp {
+          visibility: visible;
+          transition: 500ms ease-in;
+        }
+
+        .container-resp {
+          height: 220px;
+          transition: 500ms ease-in;
+        }
+        .burger {
+          display: block;
+          z-index: 1;
+        }
+        .hoho {
+          position: relative;
+          top: 70px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <header>
+        <div class="container" id="container-resp">
+          <img src="DuaNL.png" alt="logo" />
+          <ul id="aoa">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#" id="lastitem">Help</a></li>
+          </ul>
+        </div>
+        <div class="burger" id="burgero">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </header>
+    </nav>
+    <h3 class="hoho">flex wrapping</h3>
+    <div class="btno"></div>
+    <div class="box" id="box1">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+      <div class="item">Item 4</div>
+      <div class="item">Item 5</div>
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+      <div class="item">Item 4</div>
+      <div class="item">Item 5</div>
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+      <div class="item">Item 4</div>
+      <div class="item">Item 5</div>
+    </div>
+
+    <h3>moving around flex origin</h3>
+    <div class="box" id="box2">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+      <div class="item">Item 4</div>
+      <div class="item">Item 5</div>
+    </div>
+
+    <h3>Space around</h3>
+    <div class="box" id="box3">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+      <div class="item">Item 4</div>
+      <div class="item">Item 5</div>
+    </div>
+    <h3>Justify-content and align-items</h3>
+    <div class="box" id="box4">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+      <div class="item">Item 4</div>
+      <div class="item">Item 5</div>
+    </div>
+
+    <h3>using Baseline rather than flex-start</h3>
+    <div class="box" id="box5">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+      <div class="item">Item 4</div>
+      <div class="item big">Item 5</div>
+    </div>
+  </body>
+  <script>
+    burger = document.getElementById("burgero");
+    container = document.getElementById("container-resp");
+    list = document.getElementById("aoa");
+
+    function classToggle() {
+      container.classList.toggle("container-resp");
+    }
+
+    burger.addEventListener("click", classToggle);
+  </script>
+</html>

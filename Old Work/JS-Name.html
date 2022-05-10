@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+<style>
+    #btn {
+        background-color: purple;
+        text-decoration: none;
+        margin: 10px;
+        padding: 10px;
+        color: white;
+        font-size: large;
+        transition: 150ms color ease-in, 150ms background ease-in ;
+    }
+
+    #btn:hover {
+background-color: wheat;
+color: black;
+    }
+</style>
+
+</head>
+  <body>
+    Name: <input type="text" id="nameInput" />
+    <a href="#" id="btn">Button</a>
+    <p id="result">You name is: <h2 id="naam">-----</h2><br /></p>
+  </body>
+  <script>
+  
+  
+//   ==========================
+//   Name wala Kaam
+//   ==========================
+
+
+  const nameInput = document.getElementById("nameInput");
+    const documentObject = {};
+    const btn = document.getElementById("btn");
+    naam = document.getElementById("naam")
+
+//   ==========================
+//   function
+//   ==========================
+
+    function abc(){naam.innerHTML = documentObject.name}
+
+//   ==========================
+//   Getting value from input
+//   ==========================
+
+
+    Object.defineProperty(documentObject, "name", {
+      get() {
+        return nameInput.value;
+      },
+    });
+  
+//   ==========================
+//   Event Listener
+//   ==========================
+
+
+    btn.addEventListener("click", abc);
+  </script>
+</html>
