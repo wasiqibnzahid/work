@@ -5,6 +5,100 @@ nav {
   nav li {
     padding: 0; }
   nav div {
-    background-color: red; }
+    background-color: blue; }
+  nav p {
+    background-color: blue; }
+
+.container, .mini-container {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px; }
+
+.mini-container {
+  border-radius: 200px;
+  background-color: rebeccapurple; }
+
+.margin-gang {
+  margin-right: 20px; }
+
+.ora-class {
+  padding-left: 11em; }
+
+.icon-duck {
+  width: 200px; }
+
+div.container li, div.mini-container li {
+  background-color: blue; }
+
+.kite {
+  margin: auto; }
+  .kite .abc {
+    padding: auto; }
+
+.abc .ced li, .ced .abc li {
+  margin: 10px; }
+
+.def {
+  margin: 10px; }
+
+.test {
+  font-weight: 700;
+  map-keys: "medium", "normal", "bold";
+  map-values: 200, 100, 700;
+  map-merged: "medium", "normal", "bold";
+  map-removed: "medium", "normal"; }
+
+@media screen and (max-width: 1300px) {
+  li {
+    background-size: 10px; } }
+div.filler {
+  height: -webkit-fill-available;
+  height: -moz-available;
+  min-height: fit-content; }
+
+.container, .mini-container {
+  width: 1000px; }
+  @media screen and (max-width: 1000px) {
+    .container, .mini-container {
+      width: 100px; } }
+  @media screen and (max-width: 2000px) {
+    .container, .mini-container {
+      width: 20px; } }
+
+.list-1 {
+  width: 100px; }
+
+.list-2 {
+  width: 200px; }
+
+.list-3 {
+  width: 300px; }
+
+.sm {
+  padding: 5px; }
+
+.md {
+  padding: 10px; }
+
+.l {
+  padding: 15px; }
+
+.xl {
+  padding: 20px; }
+
+list-1 {
+  padding: 10px; }
+
+list-2 {
+  padding: 20px; }
+
+list-3 {
+  padding: 30px; }
+
+list-4 {
+  padding: 40px; }
+
+list-5 {
+  padding: 50px; }
 
 /*# sourceMappingURL=style.css.map */

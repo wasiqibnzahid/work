@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Your Profile | DevConnector</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="headerNav bgDark">
+            <div class="navTitle">
+                <h1><a href="home.html"><i class="fas fa-code"></i>
+                        DevConnector</h1></a>
+            </div>
+            <div class="navLinks">
+                <ul>
+                    <li><a href="developers.html">Developers</a></li>
+                    <li><a href="posts.html">Posts</a></li>
+                    <li><a href="home.html">Log Out</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Section -->
+
+    <section>
+        <div class="container">
+            <h2 class="textPrimary x-large">Add Your Education</h2>
+            <h3 class="large">
+                <i class="fas fa-graduation-cap"></i>
+                Add any school, bootcamp etc. that you have attended
+            </h3>
+            <span>* = required field</span>
+            <form action="dashboard.html" class="form">
+                <div class="form-group">
+                    <input type="text" placeholder="*School or Bootcamp">
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="*Degree or Certificate">
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Field of Study">
+                </div>
+                <div class="form-group">
+                    <input type="date" placeholder="Time Period">
+                </div>
+                <div class="form-group radio-group">
+                    <label for="current-school">Current School</label>
+                    <input type="radio" id="current-school">
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Program Description" id="" cols="30" rows="5"></textarea>
+                </div>
+                <div class="form-buttons">
+                    <input type="submit" value="Submit" class="btn btnPrimary">
+                    <input type="submit" value="Go Back" class="btn btnLight">
+                </div>
+            </form>
+        </div>
+    </section>
+
+</body>
+
+</html>

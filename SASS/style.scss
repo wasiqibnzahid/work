@@ -1,16 +1,169 @@
-nav {
+$main-color: blue;
 
-    margin: auto;
-
-    a {
-        margin: 0;
-    }
-
-    li {
-        padding: 0;
-    }
-
-    div {
-        background-color: red;
-    }
+@mixin bd-radius($value) {
+  -webkit-border-radius: $value;
+  -moz-border-radius: $value;
+  border-radius: $value;
 }
+
+body {
+  @include bd-radius(20px);
+}
+nav {
+  margin: auto;
+
+  a {
+    margin: 0;
+  }
+
+  li {
+    padding: 0;
+  }
+
+  div {
+    background-color: $main-color;
+  }
+
+  p {
+    background-color: $main-color;
+  }
+}
+
+.container {
+  @include bd-radius(20px);
+}
+
+.mini-container {
+  border-radius: 200px;
+  @extend .container;
+  background-color: rebeccapurple;
+}
+
+@mixin set-margin($name, $value) {
+  margin-#{$name}: $value;
+}
+
+.margin-gang {
+  @include set-margin(right, 20px);
+}
+
+@mixin set-padding($position, $value, $unit) {
+  padding-#{$position}: $value + $unit;
+}
+
+.ora-class {
+  @include set-padding(left, 10em, 1);
+}
+
+@mixin icon-setter($name, $value) {
+  .icon-#{$name} {
+    width: $value;
+  }
+}
+
+@include icon-setter(duck, 200px);
+@import "try";
+
+.kite {
+  margin: auto;
+
+  .abc {
+    padding: auto;
+  }
+}
+
+$list1: "a.abc";
+$list2: (20 40 60);
+
+$bleh: selector-replace(".abc .info", ".info", ".ced li");
+
+#{$bleh} {
+  margin: 10px;
+}
+
+.def {
+  margin: 10px;
+}
+
+$khokho: (
+  "medium": 200,
+  "normal": 100,
+  "bold": 700,
+);
+$mhomho: (
+  "bold": 700,
+);
+
+$merged: map-merge($khokho, $mhomho);
+$removed: map-remove($khokho, "bold");
+
+.test {
+  font-weight: map-get($khokho, "bold");
+  map-keys: map-keys($khokho);
+  map-values: map-values($khokho);
+  map-merged: map-keys($merged);
+  map-removed: map-keys($removed);
+}
+
+@mixin media($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@include media(1300px) {
+  li {
+    background-size: 10px;
+  }
+}
+
+@mixin h-fill-available() {
+  height: -webkit-fill-available;
+  height: -moz-available;
+  min-height: fit-content;
+}
+
+div.filler {
+  @include h-fill-available();
+}
+
+.container {
+  width: 1000px;
+  @media screen and (max-width: 1000px) {
+    width: 100px;
+  }
+
+  @include media(2000px) {
+    width: 20px;
+  }
+}
+
+@for $bleh from 1 through 3 {
+  .list-#{$bleh} {
+    width: 100px * $bleh;
+  }
+}
+
+$each-map: (
+  "sm": 5px,
+  "md": 10px,
+  "l": 15px,
+  "xl": 20px,
+);
+
+$each-list: ((sm, 10px), (md, 15px), (l, 20px), (xl, 25px));
+
+@each $name, $value in $each-map {
+  .#{$name} {
+    padding: $value;
+  }
+}
+
+$while-test: 1;
+
+@while ($while-test <= 5) {
+  list-#{$while-test} {
+    padding: $while-test * 10 + px;
+  }
+  $while-test: $while-test + 1;
+} ;

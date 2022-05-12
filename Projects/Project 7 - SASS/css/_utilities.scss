@@ -1,0 +1,217 @@
+// Base Tag Styling
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+img {
+  width: 100%;
+}
+
+// Utilities
+.container {
+  width: 80%;
+  padding: 2rem;
+  max-width: $maxWidth;
+  margin: 6rem auto 3rem auto;
+  @include media(600px) {
+    padding: 0;
+  }
+  &-less {
+    margin: -3em auto 1em auto;
+  }
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flexCenter {
+  justify-content: center;
+}
+
+.flexStart {
+  justify-content: flex-start;
+}
+
+.flexBetween {
+  justify-content: space-between;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.round-img {
+  border-radius: 50%;
+  min-width: 40px;
+}
+
+// Main Backgrounds
+
+.bg {
+  &Primary {
+    @include set-background($primaryColor);
+  }
+  &Dark {
+    @include set-background($darkColor);
+    color: #fff !important;
+  }
+  &Danger {
+    @include set-background($dangerColor);
+  }
+  &Light {
+    @include set-background($lightColor);
+    border: 1px solid #ccc;
+  }
+  &Success {
+    @include set-background($successColor);
+  }
+}
+
+.backgroundDark {
+  height: 100%;
+  width: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  position: absolute;
+  //   z-index: -1;
+}
+
+// Text Styling
+
+.light {
+  color: #fff;
+}
+
+.x-large {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  @include media(500px) {
+    font-size: 2rem;
+  }
+}
+
+.large {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  @include media(500px) {
+    font-size: 1rem;
+  }
+}
+
+.lead {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  @include media(500px) {
+    font-size: 1rem;
+  }
+}
+
+// Buttons
+
+.btn {
+  background-color: $lightColor;
+  color: set-text-color($lightColor);
+  padding: 0.5rem 1.25rem;
+  cursor: pointer;
+  transition: 200ms;
+  outline: none;
+  border: none;
+  display: inline-block;
+  margin-bottom: 10px;
+
+  &Primary {
+    background-color: $primaryColor;
+    color: set-text-color($primaryColor);
+
+    &:hover {
+      background-color: lighten($primaryColor, 20%);
+    }
+  }
+  &Light {
+    background-color: $lightColor;
+    color: set-text-color($lightColor);
+    &:hover {
+      background-color: lighten($darkColor, 10%);
+      color: #fff;
+    }
+  }
+  &Dark {
+    background-color: $darkColor;
+    color: set-text-color($darkColor);
+    &:hover {
+      background-color: lighten($darkColor, 20%);
+    }
+  }
+  &Success {
+    background-color: $successColor;
+    color: set-text-color($successColor);
+    &:hover {
+      background-color: lighten($successColor, 20%);
+    }
+  }
+  &Danger {
+    background-color: $dangerColor;
+    color: #fff;
+    &:hover {
+      background-color: lighten($dangerColor, 20%);
+    }
+  }
+}
+
+// Text Classes
+.textPrimary {
+  color: $primaryColor;
+}
+
+// Alerts
+
+.alert {
+  padding: 0.8rem;
+  background-color: $lightColor;
+
+  &-light {
+    @include set-background($lightColor);
+  }
+  &-dark {
+    @include set-background($darkColor);
+  }
+  &-success {
+    @include set-background($successColor);
+  }
+  &-danger {
+    @include set-background($dangerColor);
+    color: #fff !important;
+  }
+}
+
+// Responsive
+.sm-hide {
+  @include media(850px) {
+    display: none;
+  }
+}

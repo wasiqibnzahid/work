@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap");
+
+$primaryColor: #17a2b8;
+$darkColor: #343a40;
+$lightColor: #f4f4f4;
+$dangerColor: #dc3545;
+$successColor: #28a745;
+$maxWidth: 1100px;
+
+// Set Text Color based on Background
+
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return #333;
+  } @else {
+    @return #fff;
+  }
+}
+
+// Set Background
+
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-text-color($color);
+  a {
+    color: set-text-color($color);
+  }
+}
+
+$spacearound: 1 2 3 4 5;
+@each $space in $spacearound {
+  // Margin all-around
+  .m-#{$space} {
+    margin: $space + rem;
+  }
+
+  // Margin Vertical
+
+  .my-#{$space} {
+    margin: $space + rem 0;
+  }
+
+  // margin-horizontal
+  .mx-#{$space} {
+    margin: 0 $space + rem;
+  }
+
+  // padding all
+
+  .p-#{$space} {
+    padding: $space + rem;
+  }
+
+  // padding vertical
+  .py-#{$space} {
+    padding: $space + rem 0;
+  }
+
+  .px-#{$space} {
+    padding: 0 $space + rem;
+  }
+}
+
+// Media queries
+
+@mixin media($value) {
+  @media screen and (max-width: $value) {
+    @content;
+  }
+}

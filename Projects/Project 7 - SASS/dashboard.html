@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boiler | DevConnector</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="headerNav bgDark">
+            <div class="navTitle">
+                <h1><a href="home.html"><i class="fas fa-code"></i>
+                        DevConnector</h1></a>
+            </div>
+            <div class="navLinks">
+                <ul>
+                    <li><a href="developers.html">Developers</a></li>
+                    <li><a href="posts.html">Posts</a></li>
+                    <li><a href="home.html">Log Out</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Info Table -->
+
+    <section>
+        <div class="container">
+            <h2 class="textPrimary x-large">Dashboard</h2>
+            <h3 class="large">
+                <i class="fas fa-user"></i>
+                Welcome John Doe
+            </h3>
+            <div class="dash-buttons">
+                <a href="profile-edit.html" class="btn btnLight">
+                    <i class="fas fa-user-circle textPrimary"></i>
+                    Edit Profile</a>
+                <a href="profile-edit.html" class="btn btnLight">
+                    <i class="fab fa-black-tie textPrimary"></i>
+                    Add Experience</a>
+                <a href="profile-edit.html" class="btn btnLight">
+                    <i class="fa fa-graduation-cap textPrimary" "></i>
+
+                    Add Education</a>
+
+            </div>
+            <div class=" dash-experience">
+                        <h3 class=" large">Experience Credentials</h3>
+                        <table class="table">
+                            <tr>
+                                <th>Company</th>
+                                <th class="sm-hide">Title</th>
+                                <th class="sm-hide">Years</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>Microsoft</td>
+                                <td class="sm-hide">Senior Developer</td>
+                                <td class="sm-hide">Oct 2011 - Current</td>
+                                <td><a href="#" class="btn btnDanger">Delete</a></td>
+                            </tr>
+                            <tr>
+                                <td>Microsoft</td>
+                                <td class="sm-hide">Sun MicroSystems</td>
+                                <td class="sm-hide">Oct 2004 - Nov 2010</td>
+                                <td><a href="#" class="btn btnDanger">Delete</a></td>
+                            </tr>
+                        </table>
+            </div>
+            <div class="dash-education">
+                <h3 class=" large">Education Credentials</h3>
+
+                <table class="table">
+                    <tr>
+                        <th>School</th>
+                        <th class="sm-hide">Degree</th>
+                        <th class="sm-hide">Years</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>University of Washington</td>
+                        <td class="sm-hide">Masters</td>
+                        <td class="sm-hide">Sep 1993 - June 1999</td>
+                        <td><a href="#" class="btn btnDanger">Delete</a></td>
+                    </tr>
+                </table>
+            </div>
+            <a href="#" class="btn btnDanger"><i class="fa-solid fa-user-minus"></i> Delete Your
+                Account</a>
+        </div>
+    </section>
+
+</body>
+
+</html>
