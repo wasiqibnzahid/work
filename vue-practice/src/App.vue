@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <!-- Git Practice -->
     <router-view />
   </div>
 </template>
