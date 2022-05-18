@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1 @click="messageToggler">{{ aboutMessage }}</h1>
+    <h1>{{ aboutMessage }}</h1>
     <div class="table">
       <table>
         <tr>
@@ -33,13 +33,6 @@ export default {
     };
   },
   methods: {
-    messageToggler() {
-      if (this.aboutMessage == "Welcome to the about page") {
-        this.aboutMessage = "toggled about message";
-      } else {
-        this.aboutMessage = "Welcome to the about page";
-      }
-    },
     addRow() {
       this.books.push({
         bookName: "New Book",
