@@ -1,6 +1,7 @@
-import React from "react";
-import ReactDOM from "react-dom";
 import InitialMessage from "./components/InitialMessage";
+import { createRoot } from "react-dom/client";
 import "./styles/PageStyles.css";
 
-ReactDOM.render(InitialMessage(`Hello World`), document.getElementById("root"));
+createRoot(document.getElementById("root")).render(
+  InitialMessage(`Hello World React`)
+);
