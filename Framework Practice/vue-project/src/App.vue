@@ -1,6 +1,7 @@
 <template>
   <div id="id">
-    <InitialMessage message="Hello World" />
+    <div>abc</div>
+    <InitialMessage message="Hello World Vue" />
   </div>
 </template>
 

@@ -6,7 +6,7 @@ const InitialMessage = (message) => {
       <h1> {message} </h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis debitis
-        neque eum omnis repudiandae consequatur accusamus at quo quasi
+        neque seum omnis repudiandae consequatur accusamus at quo quasi
         exercitationem, laborum distinctio consequuntur cupiditate aspernatur
         dignissimos? Magnam aliquam fugiat nobis.
       </p>

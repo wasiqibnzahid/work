@@ -7,6 +7,7 @@
       exercitationem, laborum distinctio consequuntur cupiditate aspernatur
       dignissimos? Magnam aliquam fugiat nobis.
     </p>
+    
   </div>
 </template>
 
@@ -20,8 +21,10 @@ export default {
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
 * {
-  font-family: sans-serif;
+  font-family: "Poppins";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

@@ -3,5 +3,5 @@ import { createRoot } from "react-dom/client";
 import "./styles/PageStyles.css";
 
 createRoot(document.getElementById("root")).render(
-  InitialMessage(`Hello World React`)
+  InitialMessage("Hello World React")
 );
